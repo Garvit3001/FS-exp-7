@@ -79,6 +79,7 @@ export default function RegisterPage() {
               type="text"
               placeholder="johndoe"
               className={`${styles.input} ${errors.username ? styles.inputError : ""}`}
+              autoComplete="username"
               {...register("username")}
             />
             {errors.username && <span className={styles.errorMessage}>{errors.username.message}</span>}
@@ -91,6 +92,7 @@ export default function RegisterPage() {
               type="email"
               placeholder="john@example.com"
               className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
+              autoComplete="email"
               {...register("email")}
             />
             {errors.email && <span className={styles.errorMessage}>{errors.email.message}</span>}
@@ -103,6 +105,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="••••••••"
               className={`${styles.input} ${errors.password ? styles.inputError : ""}`}
+              autoComplete="new-password"
               {...register("password")}
             />
             {errors.password && <span className={styles.errorMessage}>{errors.password.message}</span>}
@@ -115,6 +118,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="••••••••"
               className={`${styles.input} ${errors.confirmPassword ? styles.inputError : ""}`}
+              autoComplete="new-password"
               {...register("confirmPassword")}
             />
             {errors.confirmPassword && <span className={styles.errorMessage}>{errors.confirmPassword.message}</span>}

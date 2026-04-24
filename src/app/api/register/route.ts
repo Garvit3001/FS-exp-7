@@ -16,8 +16,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Simulate network latency / database operation block
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // (Removed artificial network latency for performance)
 
     // Here you would normally save the user to a database and hash the password (e.g., bcrypt)
     // For this experiment, we simply simulate success with standard REST conventions.
